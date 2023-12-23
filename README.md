@@ -1,2 +1,1 @@
-# ningammark
-# devops-cicd-git
+Devops class
