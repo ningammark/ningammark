@@ -1,1 +1,1 @@
-pring "Hello"
+print "Hello"
