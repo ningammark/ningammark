@@ -1,0 +1,41 @@
+pipeline{
+    agent {
+	label 'Node-1'
+	}
+    stages {
+        stage('Hostname'){
+            steps {
+                sh 'hostname'
+            }
+            
+        }
+
+        stage('ip-address'){
+            steps{
+                sh 'hostname -I'
+            }
+            
+        }
+
+        stage('cpdetails'){
+            steps{
+                sh 'lscpu'
+            }
+            
+        }
+
+        stage('Disk utilation'){
+            steps{
+                sh 'df -kh'
+            }
+            
+        }
+
+        stage('Ram-usgae'){
+            steps{
+                sh 'free -gh'
+            }
+        }
+        
+    }
+}
