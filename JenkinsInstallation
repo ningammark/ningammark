@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo wget -0 /etc/yum.repos.d/jenkins.repo\ ---paste jenkins link---
+sudo rpm --import ---paste jenkins key link---
+sudo yum upgrade -y
+#Add required dependencies for the jenkins package
+sudo yum install java -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+jenkins_status=$(sudo systemctl status jenkins)
+echo "$jenkins_status"
